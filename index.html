@@ -165,9 +165,9 @@
         <h2 class="title is-3">Detecting Parametric Knowledge Conflicts</h2>
         <div class="content has-text-justified">
           <img src="static/images/conflict_case.png" height="100%"/>
-          <h2 class="subtitle has-text-centered">
+          <!-- <h2 class="subtitle has-text-centered">
             Example of cross-modality knowledge conflict.
-          </h2>
+          </h2> -->
           <p>
             For a question towards a named entity, we present the entity in both textual and visual form.
             For the textual form, we add a indicator prompt before the question, informing the model of the entity.
@@ -193,12 +193,12 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Interpretation</h2>
+        <h2 class="title is-3">Interpretating Parametric Knowledge Conflicts</h2>
         <div class="content has-text-justified">
           <img src="static/images/results_cd_metric.png" height="100%"/>
-          <h2 class="subtitle has-text-centered">
+          <!-- <h2 class="subtitle has-text-centered">
             Distribution of the contrastive metric on all samples, samples with modality-consistent answers, and samples with modality-conflict answers. The dashed lines indicate the medians.
-          </h2>
+          </h2> -->
           <p>
             Confidence alone is not a reliable indicator of answer correctness when confronted with conflict samples.
             The proposed contrastive metric effectively distinguishes conflicting samples from consistent ones, suggesting that cross-modality knowledge conflicts tend to exacerbate the information gap between tokens across different modalities, regardless of the model size.
@@ -209,23 +209,32 @@
   </div>
 </section>
 
-<section class="section hero is-light"></section>
+<section class="section hero"></section>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Mitigation</h2>
+        <h2 class="title is-3">Mitigating Parametric Knowledge Conflicts</h2>
         <div class="content has-text-justified">
           <p>
-            To mitigate cross-modality knowledge conflicts, we propose a dynamic contrastive decoding (DCD) method and two prompting strategies.
+            To mitigate cross-modality knowledge conflicts, we propose a dynamic contrastive decoding (DCD) method.
+            For models that do not provide access to logits, we provide two prompting strategies.
           </p>
-          <img src="static/images/results_cd.png" height="100%"/>
-          <h2 class="subtitle has-text-centered">
-            Results of the dynamic contrastive decoding compared to the baselines.
-          </h2>
-          <img src="static/images/results_prompt.png" height="100%"/>
-          <h2 class="subtitle has-text-centered">
-            Results of the prompting strategies compared to the baselines.
-          </h2>
+          <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+             <div class="item">
+                <img src="static/images/results_cd.png" height="100%" alt="MY ALT TEXT"/>
+                <!-- <h2 class="subtitle has-text-centered">
+                  First image description.
+                </h2> -->
+              </div>
+              <div class="item">
+                <img src="static/images/results_prompt.png" height="100%" alt="MY ALT TEXT"/>
+                <!-- <h2 class="subtitle has-text-centered">
+                  First image description.
+                </h2> -->
+              </div>
+            </div>
+          </div>
           <p>
             Dynamic contrastive decoding (DCD) brings universal improvements against the baselines.
             The performance of prompting-based strategies varies depending on the model size.
@@ -306,8 +315,7 @@
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
         </div>
